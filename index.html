@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Nhóm 3: Giải pháp nhận dạng văn bản</title>
+        <link rel="icon" type="image/x-icon" href="img/logo.ico" />
+
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Nhóm 3</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                       Nhóm
+                        <span class="text-primary">3</span>
+                    </h1>
+                    <div class="subheading mb-1">
+                     <a class="nav-link js-scroll-trigger" style="list-style: none;">Môn Học: Công Nghệ Phần Mềm Nâng Cao</a>
+                     <br>
+                     <a class="nav-link js-scroll-trigger"  style="list-style: none;">BÀI TẬP: <b>Giải pháp nhận dạng văn bản</b> </a>
+                     <br>
+                     <br>
+                    </div>
+                    
+                    <div class="social-icons lead mb-5">Gồm các thành viên: 
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.facebook.com/profile.php?id=100011687827694" >Nguyễn Thị Kim Anh - 44.01.104.051</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.facebook.com/nqcuong20">Nguyễn Quốc Cường - 44.01.104.061</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://www.facebook.com/profile.php?id=100050040153633">Dương Thái Nhật - 44.01.104.161</a></li>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+          
+            <section class="resume-section" id="dangnhap">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Giải pháp nhận dạng văn bản</h2>
+                    <div class="social-icons lead mb-5"> 
+                      <h4>DEMO</h4> 
+                          <ul style="list-style-type:none;">
+                              <li class="nav-item"><a class="nav-link js-scroll-trigger">Chọn tệp ảnh văn bản:</a>
+                                <ul>
+                                  <li class="nav-item"><div class="custom-file">
+                                    <input for="input_image" class="custom-file-input"  type="file" id="input_image" name="input_image" onchange="readURL(this);">
+                                    <label class="custom-file-label" for="customFile">Vui lòng chọn file hình ảnh ...</label>
+                                  </div></a></li>    
+                                </ul>
+                              </li>
+                              <li class="nav-item"><a class="nav-link js-scroll-trigger">Chọn phần 1 phần văn bản:</a>
+                                <ul>
+                                  <li class="nav-item"><div class="custom-file">
+                                    <input for="input_image" class="custom-file-input" type="file" id="input_image1" name="input_image" onchange="readURL(this, 1);">
+                                    <label class="custom-file-label" for="customFile">Vui lòng chọn file hình ảnh ...</label>
+                                  </div></a></li>    
+                                </ul>
+                              </li>
+                         </ul>
+                    </div>
+
+                    <!-- DEMO -->
+                    <div class="container" class="social-icons lead mb-5">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="social-icons lead mb-5"> 
+                            
+                            <h4 style="padding-bottom: 13px;">HÌNH ẢNH</h4> 
+                            <br>
+                                <ul style="list-style-type:none; padding-left: 0px;">
+                                  <img  id="image01" src="img/demo.jpg" alt="Cuong Dep Trai" class="img-fluid" alt="" >
+                               </ul>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="social-icons lead mb-2"> 
+                                        <h4>KẾT QUẢ 
+                                          <progress id="progressbar" class="progress" class="progress-bar progress-bar-striped bg-success" min="0" max="1" value="0"  style="width: 80%; height: 10px; background-color: bisque;"/> </h4>
+                                        
+                                        <br> 
+                                            <ul style="list-style-type:none; padding-left: 0px;">
+                                                  <div class="mb-3">
+                                                    <textarea  id="image-text" rows="10"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                  </div>
+                                           </ul>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-12">
+                                    <div class="social-icons lead mb-2"> 
+                                        <h4>CƠ QUAN BAN HÀNH
+                                          <progress id="progressbar" class="progress" class="progress-bar progress-bar-striped bg-success" min="0" max="1" value="0"  style="width: 80%; height: 10px; background-color: bisque;"/> </h4>
+                                        
+                                        <br> 
+                                            <ul style="list-style-type:none; padding-left: 0px;">
+                                                  <div class="mb-3">
+                                                    <textarea  rows="10"  class="form-control" id="cqbh" rows="3"></textarea>
+                                                  </div>
+                                           </ul>
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary" onclick="tai_lai_trang()"> Tải lại trang </button>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+          <hr class="m-0" />
+        </div>
+
+
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up muiten"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+        
+	      <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+  
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+  
+        <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>
+      var typeExtraction = 0;
+        document.addEventListener('DOMContentLoaded', function(){
+            var input_image = document.getElementById('input_image');
+            input_image.addEventListener('change', handleInputChange);
+            var input_image1 = document.getElementById('input_image1');
+            input_image1.addEventListener('change', handleInputChange);
+            var input_image2 = document.getElementById('input_image2');
+            input_image2.addEventListener('change', handleInputChange);
+            var input_image3 = document.getElementById('input_image3');
+            input_image3.addEventListener('change', handleInputChange);
+            var input_image4 = document.getElementById('input_image4');
+            input_image4.addEventListener('change', handleInputChange);
+            var input_image5 = document.getElementById('input_image5');
+            input_image5.addEventListener('change', handleInputChange);
+            var input_image6 = document.getElementById('input_image6');
+            input_image6.addEventListener('change', handleInputChange);
+            var input_image7 = document.getElementById('input_image7');
+            input_image7.addEventListener('change', handleInputChange);
+            //document.getElementById('image01').src = input_image;
+        });
+        function textExtract(image) {
+            var canvas = document.querySelector('#canvas01');
+            var img = document.querySelector('#image01');
+            //var cropData = $(img).data().Jcrop.tellSelect();
+            //console.log(cropData);
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(
+                image,
+                0,
+                0,
+                1200,
+                560);
+                
+            Tesseract.recognize(ctx,'vie')
+                .then(function(result){
+                    var contentArea = document.getElementById('cqbh');
+					contentArea.innerHTML = result.text;
+                    console.log(result);
+                })
+                .catch(function(err){
+                    console.error(err);
+                });
+            
+        }
+        function handleInputChange(event){
+            var input = event.target;
+            var file = input.files[0];
+            console.log(file);
+            Tesseract.recognize(file,'vie')
+                .progress(function(message){
+					document.getElementById('progressbar').value = message.progress;
+                    console.log(message);
+                })
+                .then(function(result){
+                    
+                    var contentArea = document.getElementById('image-text');
+					if(typeExtraction == 1)
+                        document.getElementById('cqbh').value = result.text;
+                    else if(typeExtraction == 2)
+                        document.getElementById('skh').value = result.text;
+                    else if(typeExtraction == 3)
+                        document.getElementById('ntn').value = result.text;
+                    else if(typeExtraction == 4)
+                        document.getElementById('tlvb').value = result.text;
+                    else if(typeExtraction == 5)
+                        document.getElementById('ty').value = result.text;
+                    else if(typeExtraction == 6)
+                        document.getElementById('nn').value = result.text;
+                    else if(typeExtraction == 7)
+                        document.getElementById('nk').value = result.text;
+                    else
+                        contentArea.innerHTML += "br>" + result.text;
+                    console.log(result);
+                })
+                .catch(function(err){
+                    console.error(err);
+                });
+        }
+        
+        function readURL(input, part = 0) {
+            typeExtraction = part;
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image01')
+                        .attr('src', e.target.result)
+                        .width(500)
+                        .height(600);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        
+        function textExtract(image) {
+            var canvas = document.querySelector('#canvas01');
+            var img = document.querySelector('#image01');
+            //var cropData = $(img).data().Jcrop.tellSelect();
+            //console.log(cropData);
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(
+                image,
+                0,
+                0,
+                1200,
+                560);
+                
+            Tesseract.recognize(ctx,'vie')
+                .then(function(result){
+                    var contentArea = document.getElementById('cqbh');
+					contentArea.innerHTML = result.text;
+                    console.log(result);
+                })
+                .catch(function(err){
+                    console.error(err);
+                });
+            
+        }
+        function step2() {
+            var canvas = document.querySelector('#canvas01');
+            var img = document.querySelector('#image01');
+            
+            if(reader != null)
+                img = 
+
+            //setup canvas
+            canvas.width = pictureWidth;
+            canvas.height = pictureHeight;
+
+            var ctx = canvas.getContext('2d');
+
+            //draw picture from video on canvas
+            ctx.drawImage(video, 0, 0);
+
+            //modify the picture using glfx.js filters
+            texture = fxCanvas.texture(canvas);
+            fxCanvas.draw(texture)
+                .hueSaturation(-1, -1)//grayscale
+                .unsharpMask(20, 2)
+                .brightnessContrast(0.2, 0.9)
+                .update();
+
+            window.texture = texture;
+            window.fxCanvas = fxCanvas;
+
+            $(img)
+                //setup the crop utility
+                .one('load', function () {
+                    if (!$(img).data().Jcrop) {
+                        $(img).Jcrop({
+                            onSelect: function () {
+                                //Enable the 'done' button
+                                $('#adjust').removeAttr('disabled');
+                            }
+                        });
+                    } else {
+                        //update crop tool (it creates copies of <img> that we have to update manually)
+                        $('.jcrop-holder img').attr('src', fxCanvas.toDataURL());
+                    }
+                })
+                //show output from glfx.js
+                .attr('src', fxCanvas.toDataURL());
+        }
+        function tai_lai_trang(){
+            location.reload();
+        }
+      </script>
+    </body>
+</html>
